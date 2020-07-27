@@ -1,0 +1,55 @@
+package com.LinkedList;
+import java.util.Arrays;
+import java.util.IndexOutOfBoundException;
+class Array{
+	private int[] items;
+	private int count;
+	public Array(int length) {
+		items=new int[length];
+	}
+	public void insert(int item) {
+		items[count++]=item;
+	}
+	public void print() {
+		for(int i=0;i<count;i++) {
+			System.out.println(+ items[i] );
+		}
+	}
+    	public void Max(){
+			int max=items[0];
+			for(int i=0;i<count;i++) {
+				if(items[i]>max)
+					max=items[i];	
+			}
+			System.out.println("Max number is: "+ max);
+		}
+		public void intersect() {
+			int term;
+			int[] arr= {10,200,300,50};
+			for(int i=0;i<count;i++) {
+				if(items[i]==arr[i]) {
+					term=items[i];
+				     System.out.println("unique numbers are: " +term);
+				}
+			}
+		}
+		public void reverse() {
+			for(int i=count-1;i>=0;i--)
+			System.out.print(+ items[i] );
+		}
+}
+public class ArraysEx {
+	public static void main(String[] args) {
+		Array numbers=new Array(4);
+		numbers.insert(100);
+		numbers.insert(200);
+		numbers.insert(300);
+		numbers.insert(400);
+		numbers.print();
+		numbers.Max();
+		numbers.intersect();
+		numbers.reverse();
+		
+	}
+		
+	}
